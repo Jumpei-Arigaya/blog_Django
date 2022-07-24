@@ -9,4 +9,12 @@ class Index(ListView):
 class Detail(DetailView):
     #objectで取得可能
     model = Post
-# Create your views here.
+
+from django.views.generic.edit import CreateView
+
+#CreateViewは新規作成画面を簡単に作るためのView
+class Create(CreateView):
+    model = Post
+
+    #編集対象にするフィールド
+    fields = ["title", "body", "category", "tags"]

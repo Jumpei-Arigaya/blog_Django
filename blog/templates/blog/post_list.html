@@ -6,6 +6,7 @@
     <li><a href="{% url 'detail' post.id %}">{{ post.title }}</a></li>
     {% endfor %}
 </ol>
+<p><a href="{% url 'create' %}">新規投稿</a></p>
 {% endblock %}
 
     
