@@ -32,7 +32,7 @@ class Post(models.Model):
         null=False
     )
 
-    updata = models.DateTimeField(
+    update = models.DateTimeField(
         auto_now=True,
         editable=False,
         blank=False,
