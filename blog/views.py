@@ -1,3 +1,4 @@
+from sre_constants import SUCCESS
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from . models import Post
@@ -18,3 +19,16 @@ class Create(CreateView):
 
     #編集対象にするフィールド
     fields = ["title", "body", "category", "tags"]
+
+from django.views.generic.edit import UpdateView
+
+class Update(UpdateView):
+    model = Post
+    fields = ["title", "body", "category", "tags"]
+
+from django.views.generic.edit import DeleteView
+
+class Delete(DeleteView):
+    model = Post
+    
+    success_url = "/"
